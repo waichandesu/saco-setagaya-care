@@ -29,7 +29,6 @@
     min-height: 100vh;
   }
 
-  /* 背景テクスチャ */
   body::before {
     content: '';
     position: fixed;
@@ -49,7 +48,6 @@
     padding: 0 24px 80px;
   }
 
-  /* ヘッダー */
   .header {
     padding: 52px 0 36px;
     text-align: center;
@@ -82,14 +80,6 @@
     letter-spacing: 0.15em;
   }
 
-  .divider {
-    width: 40px;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--brown-light), transparent);
-    margin: 24px auto;
-  }
-
-  /* 説明文 */
   .description {
     background: white;
     border-radius: 16px;
@@ -106,7 +96,6 @@
     margin-top: 12px;
   }
 
-  /* 日程セクション */
   .section-label {
     font-family: 'Shippori Mincho', serif;
     font-size: 13px;
@@ -133,7 +122,6 @@
     margin-bottom: 32px;
     animation: fadeUp 0.8s 0.3s ease both;
   }
-
 
   .schedule-link {
     text-decoration: none;
@@ -226,68 +214,6 @@
     box-shadow: 0 6px 20px rgba(92,61,46,0.08);
   }
 
-  .schedule-date {
-    font-family: 'Shippori Mincho', serif;
-    font-size: 24px;
-    font-weight: 700;
-    color: var(--brown);
-    min-width: 48px;
-    text-align: center;
-    line-height: 1;
-    padding-top: 4px;
-  }
-
-  .schedule-date-unit {
-    font-size: 13px;
-    color: var(--brown-mid);
-    letter-spacing: 0.1em;
-    margin-top: 2px;
-    text-align: center;
-  }
-
-  .schedule-divider {
-    width: 1px;
-    height: 36px;
-    background: var(--warm);
-  }
-
-  .schedule-info {
-    flex: 1;
-  }
-
-  .schedule-day {
-    font-size: 16px;
-    color: var(--brown);
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    margin-bottom: 3px;
-  }
-
-  .schedule-time {
-    font-size: 14px;
-    color: var(--brown-mid);
-    letter-spacing: 0.05em;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    margin-top: 6px;
-  }
-
-  .schedule-time span {
-    display: block;
-  }
-
-  .schedule-badge {
-    font-size: 10px;
-    color: var(--green);
-    background: var(--green-light);
-    border-radius: 20px;
-    padding: 3px 10px;
-    letter-spacing: 0.05em;
-    white-space: nowrap;
-  }
-
-  /* 予約ボタン */
   .cta-section {
     animation: fadeUp 0.8s 0.4s ease both;
   }
@@ -339,7 +265,6 @@
     letter-spacing: 0.1em;
   }
 
-  /* プロフィール */
   .profile-section {
     background: white;
     border-radius: 20px;
@@ -382,7 +307,6 @@
     line-height: 1.8;
   }
 
-  /* フッター */
   .footer {
     margin-top: 48px;
     text-align: center;
@@ -403,16 +327,13 @@
     letter-spacing: 0.1em;
   }
 
-  /* アニメーション */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(16px); }
     to   { opacity: 1; transform: translateY(0); }
   }
 
-  /* スマホ調整 */
   @media (max-width: 360px) {
     .header-title { font-size: 24px; }
-    .schedule-date { font-size: 20px; }
   }
 </style>
 </head>
@@ -430,7 +351,6 @@
     <p>1枠60分（ご予約優先）</p>
     <p>料金　大人：10,000円、お子さま：5,000円</p>
     <p>ご予約は「予約する」ボタンよりLINE予約または直接さこうにメッセージください。（LINE、メッセンジャーなどなんでも可です）</p>
-    <p></p>
     <p style="font-size:12px; color: var(--brown-light); margin-top:14px; line-height:2;">
       ※ ご紹介・ご縁のある方限定でご案内しています。<br>
       ※ 世田谷在住・在勤・在学に限らずお受けいただけます。
@@ -472,7 +392,6 @@
       </div>
     </a>
 
-    <!-- ▼ 7月のURLができたら XXXXXXX を差し替えてください ▼ -->
     <a class="schedule-item schedule-link" href="https://liff.line.me/2008532962-3VRqVQp4?liff_id=2008532962-3VRqVQp4&group_id=184168">
       <div class="schedule-head">
         <div class="schedule-head-left">
@@ -509,7 +428,6 @@
 
   <div class="cta-section">
     <div class="cta-note">ご予約はLINE予約または直接メッセージにて承ります。</div>
-    <!-- ▼ 直接メッセージ用のLINE公式URLをここに入れてください ▼ -->
     <a href="https://line.me/R/ti/p/@217mfkyf" class="cta-btn">
       LINEで直接メッセージする
       <span class="cta-btn-sub">タップするとLINEが開きます</span>
