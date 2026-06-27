@@ -361,7 +361,7 @@
 
   <div class="schedule-list">
     <!-- ▼ ここの日程を毎月書き換えます ▼ -->
-    <a class="schedule-item schedule-link" href="https://liff.line.me/2008532962-3VRqVQp4?liff_id=2008532962-3VRqVQp4&group_id=183388">
+    <a class="schedule-item schedule-link" href="https://liff.line.me/2008532962-3VRqVQp4?liff_id=2008532962-3VRqVQp4&group_id=183388" data-date="2026-06-18">
       <div class="schedule-head">
         <div class="schedule-head-left">
           <div class="schedule-day-main">6月18日（木）</div>
@@ -376,7 +376,7 @@
       </div>
     </a>
 
-    <a class="schedule-item schedule-link" href="https://liff.line.me/2008532962-3VRqVQp4?liff_id=2008532962-3VRqVQp4&group_id=183391">
+    <a class="schedule-item schedule-link" href="https://liff.line.me/2008532962-3VRqVQp4?liff_id=2008532962-3VRqVQp4&group_id=183391" data-date="2026-06-28">
       <div class="schedule-head">
         <div class="schedule-head-left">
           <div class="schedule-day-main">6月28日（日）</div>
@@ -391,7 +391,7 @@
       </div>
     </a>
 
-    <a class="schedule-item schedule-link" href="https://liff.line.me/2008532962-3VRqVQp4?liff_id=2008532962-3VRqVQp4&group_id=184168">
+    <a class="schedule-item schedule-link" href="https://liff.line.me/2008532962-3VRqVQp4?liff_id=2008532962-3VRqVQp4&group_id=184168" data-date="2026-07-16">
       <div class="schedule-head">
         <div class="schedule-head-left">
           <div class="schedule-day-main">7月16日（木）</div>
@@ -406,7 +406,7 @@
       </div>
     </a>
 
-    <a class="schedule-item schedule-link" href="https://liff.line.me/2008532962-3VRqVQp4?liff_id=2008532962-3VRqVQp4&group_id=184169">
+    <a class="schedule-item schedule-link" href="https://liff.line.me/2008532962-3VRqVQp4?liff_id=2008532962-3VRqVQp4&group_id=184169" data-date="2026-07-26">
       <div class="schedule-head">
         <div class="schedule-head-left">
           <div class="schedule-day-main">7月26日（日）</div>
@@ -446,5 +446,20 @@
   </div>
 
 </div>
+
+<script>
+  (function() {
+    var today = new Date();
+    today.setHours(0, 0, 0, 0);
+    today.setDate(today.getDate() - 1);
+    var cards = document.querySelectorAll('.schedule-item[data-date]');
+    cards.forEach(function(card) {
+      var d = new Date(card.getAttribute('data-date'));
+      if (d < today) {
+        card.classList.add('ended');
+      }
+    });
+  })();
+</script>
 </body>
 </html>
