@@ -327,6 +327,24 @@
     letter-spacing: 0.1em;
   }
 
+  
+  .schedule-item.ended {
+    opacity: 0.45;
+    pointer-events: none;
+  }
+ 
+  .schedule-item.ended .schedule-day-main::after {
+    content: '　終了';
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--brown-light);
+    letter-spacing: 0.05em;
+  }
+
+  .schedule-item.ended .schedule-reserve {
+    background: #ccc;
+  }
+  
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(16px); }
     to   { opacity: 1; transform: translateY(0); }
